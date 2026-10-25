@@ -47,7 +47,7 @@ The LSTM improves on persistence by about 49% and on the EMA by about 15%. The s
 
 ## 4. Environment model
 
-**Load mapping.** The trace has no request counts, so request rate is assumed proportional to utilization and rescaled so that the reference peak load is 1.3x edge capacity (reference utilization: `[state which: dev-set max or 95th percentile]`):
+**Load mapping.** The trace has no request counts, so request rate is assumed proportional to utilization and rescaled so that the reference peak load is 1.3x edge capacity (reference utilization: 95th Percentile):
 
 $$\hat\lambda_{t+1} = \frac{\hat u_{t+1}}{u_{ref}}\,\lambda_{peak}$$
 
